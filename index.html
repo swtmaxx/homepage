@@ -18,44 +18,70 @@
   <script defer src="https://umami.swtmax.top/script.js" data-website-id="43e65abe-30c9-439b-9a6a-ec1dfe0b6465"></script>
   <script defer src="https://cloud.umami.is/script.js" data-website-id="741197f8-fdc4-4d91-ae86-803f3cb1196b"></script>
   <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #ffffff;
-      color: #111;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  /* 默认亮色模式变量 */
+  :root {
+    --bg-color: #ffffff;
+    --text-main: #111111;
+    --text-sub: #555555;
+    --link-hover: #111111;
+  }
+
+  /* 深色模式变量 */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg-color: #121212; /* 深灰色背景，比纯黑更护眼 */
+      --text-main: #e0e0e0;
+      --text-sub: #a0a0a0;
+      --link-hover: #ffffff;
     }
-    .container {
-      text-align: center;
-    }
-    h1 {
-      font-size: 2rem;
-      margin: 0 0 0.5rem;
-      font-weight: 600;
-    }
-    p {
-      margin: 0;
-      font-size: 1rem;
-      color: #555;
-    }
-      .links, .sites {
-      margin-top: 1rem;
-    }
-    a {
-      display: inline-block;
-      margin: 0 0.5rem;
-      font-size: 0.9rem;
-      color: #111;
-      text-decoration: none;
-      border-bottom: 1px solid transparent;
-    }
-    a:hover {
-      border-bottom-color: #111;
-    }
-  </style>
+  }
+
+  body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-color); /* 使用变量 */
+    color: var(--text-main);    /* 使用变量 */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    transition: background 0.3s, color 0.3s; /* 添加平滑过渡动画 */
+  }
+
+  .container {
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin: 0 0 0.5rem;
+    font-weight: 600;
+  }
+
+  p {
+    margin: 0;
+    font-size: 1rem;
+    color: var(--text-sub); /* 使用变量 */
+  }
+
+  .links, .sites {
+    margin-top: 1rem;
+  }
+
+  a {
+    display: inline-block;
+    margin: 0 0.5rem;
+    font-size: 0.9rem;
+    color: var(--text-main); /* 使用变量 */
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s;
+  }
+
+  a:hover {
+    border-bottom-color: var(--link-hover); /* 使用变量 */
+  }
+</style>
 </head>
 <body>
   <div class="container">
