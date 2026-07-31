@@ -1,103 +1,200 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>swtmaxの主页</title>
-  <meta name="title" content="swtmaxの主页">
-  <meta name="description" content="欢迎来到我的小窝！博客、资源站、留言板都在里面，资源站里有好东西哦~">
-  <meta name="author" content="swtmax">
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
-  <link rel="icon" type="image/png" sizes="64x64" href="/favicon-64x64.png">
-  <link rel="icon" type="image/png" sizes="128x128" href="/favicon-128x128.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <script defer src="https://umami.swtmax.top/script.js" data-website-id="43e65abe-30c9-439b-9a6a-ec1dfe0b6465"></script>
-  <script defer src="https://cloud.umami.is/script.js" data-website-id="741197f8-fdc4-4d91-ae86-803f3cb1196b"></script>
-  <style>
-  /* 默认亮色模式变量 */
-  :root {
-    --bg-color: #ffffff;
-    --text-main: #111111;
-    --text-sub: #555555;
-    --link-hover: #111111;
-  }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#050709" />
+    <meta name="description" content="swtmax 的个人主页与在线服务入口。" />
+    <meta name="author" content="swtmax" />
+    <title>swtmax // personal node</title>
+    <link rel="icon" href="./assets/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css?v=cyber-2" />
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
+    <script defer src="https://umami.swtmax.top/script.js" data-website-id="43e65abe-30c9-439b-9a6a-ec1dfe0b6465"></script>
+    <script defer src="https://umami.swtmax.top/recorder.js" data-website-id="43e65abe-30c9-439b-9a6a-ec1dfe0b6465"></script>
+    <script src="./script.js?v=cyber-2" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#services">跳到服务入口</a>
 
-  /* 深色模式变量 */
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg-color: #121212; /* 深灰色背景，比纯黑更护眼 */
-      --text-main: #e0e0e0;
-      --text-sub: #a0a0a0;
-      --link-hover: #ffffff;
-    }
-  }
+    <div class="scanlines" aria-hidden="true"></div>
+    <div class="cursor-reticle" aria-hidden="true"><span></span></div>
+    <div class="scroll-progress" aria-hidden="true"></div>
 
-  body {
-    margin: 0;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--bg-color); /* 使用变量 */
-    color: var(--text-main);    /* 使用变量 */
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    transition: background 0.3s, color 0.3s; /* 添加平滑过渡动画 */
-  }
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="返回首页">
+        <span class="brand-mark">
+          <img src="./assets/favicon-128x128.png" alt="" width="28" height="28" />
+        </span>
+        <span class="brand-copy">
+          <strong>SWTMAX</strong>
+          <small>PERSONAL NODE</small>
+        </span>
+      </a>
 
-  .container {
-    text-align: center;
-  }
+      <div class="header-status" aria-label="节点状态">
+        <span class="status-dot"></span>
+        <span>NODE ONLINE</span>
+      </div>
 
-  h1 {
-    font-size: 2rem;
-    margin: 0 0 0.5rem;
-    font-weight: 600;
-  }
+      <nav class="header-nav" aria-label="网站导航">
+        <a href="#services"><span>01</span>服务</a>
+        <a href="#contact"><span>02</span>联系</a>
+      </nav>
+    </header>
 
-  p {
-    margin: 0;
-    font-size: 1rem;
-    color: var(--text-sub); /* 使用变量 */
-  }
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-grid" aria-hidden="true"></div>
+        <div class="data-rain" aria-hidden="true">
+          <span>01001110</span><span>0x7E21</span><span>SWT_NODE</span><span>1477026875</span>
+          <span>CN_UTC+8</span><span>11010010</span><span>SYS.READY</span><span>0xFF03</span>
+        </div>
 
-  .links, .sites {
-    margin-top: 1rem;
-  }
+        <div class="hero-copy reveal">
+          <p class="eyebrow"><span>SYS://</span> CONNECTION ESTABLISHED</p>
+          <h1 id="hero-title" class="glitch" data-text="SWTMAX">SWTMAX</h1>
+          <p class="hero-intro">你好，这里是我的个人节点。<br />资源、服务，以及连接到我的方式。</p>
 
-  a {
-    display: inline-block;
-    margin: 0 0.5rem;
-    font-size: 0.9rem;
-    color: var(--text-main); /* 使用变量 */
-    text-decoration: none;
-    border-bottom: 1px solid transparent;
-    transition: border-color 0.3s;
-  }
+          <div class="hero-actions">
+            <a class="primary-action" href="#services">
+              <span>进入节点</span>
+              <i data-lucide="corner-right-down" aria-hidden="true"></i>
+            </a>
+            <a class="text-action" href="mailto:swtmax@qq.com">
+              <span>发送信号</span>
+              <i data-lucide="radio" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
 
-  a:hover {
-    border-bottom-color: var(--link-hover); /* 使用变量 */
-  }
-</style>
-</head>
-<body>
-  <div class="container">
-    <h1>swtmax</h1>
-    <p>你好</p>
-    <div class="links">
-      <a href="mailto:swtmax@qq.com" target="_blank">Email</a>
-      <a href="https://qm.qq.com/cgi-bin/qm/qr?k=OrGbHZcMyk2pK5nprZcaxnKudAC0f62h" target="_blank">QQ</a>
-      <a href="https://space.bilibili.com/1477026875" target="_blank">哔哩哔哩</a>
-    </div>
-    <div class="sites">
-      <a href="https://openlist.swtmax.top/" target="_blank">资源站</a>
-      <a href="https://waline.swtmax.top/" target="_blank">留言板</a>
-      <a href="https://up.swtmax.top/" target="_blank">服务监控</a>
-      <a href="https://mc.swtmax.top/" target="_blank">MC服务器</a>
-    </div>
-  </div>
-</body>
+        <div class="hero-visual reveal" aria-label="swtmax 像素身份标识">
+          <div class="target-frame">
+            <span class="corner top-left"></span>
+            <span class="corner top-right"></span>
+            <span class="corner bottom-left"></span>
+            <span class="corner bottom-right"></span>
+            <span class="axis axis-x"></span>
+            <span class="axis axis-y"></span>
+            <div class="avatar-glitch" data-label="ID_01">
+              <img src="./assets/favicon-128x128.png" alt="swtmax 的像素头像" width="128" height="128" />
+            </div>
+          </div>
+
+          <div class="identity-data">
+            <span><b>ID</b> SWT-0001</span>
+            <span><b>LOC</b> CN / UTC+8</span>
+            <span><b>AUTH</b> VERIFIED</span>
+          </div>
+        </div>
+
+        <div class="system-strip" aria-label="系统信息">
+          <span><b>LOCAL TIME</b><output id="local-time">00:00:00</output></span>
+          <span><b>UPLINK</b><output id="uplink-value">00.0</output> MS</span>
+          <span><b>SESSION</b><output id="session-value">000000</output></span>
+          <span class="strip-message">SCROLL TO ACCESS MODULES <i data-lucide="chevrons-down" aria-hidden="true"></i></span>
+        </div>
+      </section>
+
+      <section class="services" id="services" aria-labelledby="services-title">
+        <div class="section-heading reveal">
+          <div class="section-code">
+            <span>01</span>
+            <span>MODULE DIRECTORY</span>
+          </div>
+          <h2 id="services-title">接入服务<span>_</span></h2>
+          <p>SELECT A MODULE TO INITIALIZE CONNECTION</p>
+        </div>
+
+        <div class="service-grid">
+          <a class="service-module reveal" href="https://openlist.swtmax.top/" target="_blank" rel="noreferrer" data-accent="cyan">
+            <span class="module-index">MOD_01</span>
+            <span class="module-icon"><i data-lucide="folder-open" aria-hidden="true"></i></span>
+            <span class="module-copy">
+              <strong data-scramble="资源站">资源站</strong>
+              <small>RESOURCE ARCHIVE</small>
+            </span>
+            <span class="module-domain">openlist.swtmax.top</span>
+            <span class="module-state"><i></i> READY</span>
+            <span class="module-arrow"><i data-lucide="arrow-up-right" aria-hidden="true"></i></span>
+          </a>
+
+          <a class="service-module reveal" href="https://waline.swtmax.top/" target="_blank" rel="noreferrer" data-accent="magenta">
+            <span class="module-index">MOD_02</span>
+            <span class="module-icon"><i data-lucide="message-square-text" aria-hidden="true"></i></span>
+            <span class="module-copy">
+              <strong data-scramble="留言板">留言板</strong>
+              <small>MESSAGE TERMINAL</small>
+            </span>
+            <span class="module-domain">waline.swtmax.top</span>
+            <span class="module-state"><i></i> READY</span>
+            <span class="module-arrow"><i data-lucide="arrow-up-right" aria-hidden="true"></i></span>
+          </a>
+
+          <a class="service-module reveal" href="https://up.swtmax.top/" target="_blank" rel="noreferrer" data-accent="amber">
+            <span class="module-index">MOD_03</span>
+            <span class="module-icon"><i data-lucide="activity" aria-hidden="true"></i></span>
+            <span class="module-copy">
+              <strong data-scramble="服务监控">服务监控</strong>
+              <small>SYSTEM MONITOR</small>
+            </span>
+            <span class="module-domain">up.swtmax.top</span>
+            <span class="module-state"><i></i> READY</span>
+            <span class="module-arrow"><i data-lucide="arrow-up-right" aria-hidden="true"></i></span>
+          </a>
+
+          <a class="service-module reveal" href="https://mc.swtmax.top/" target="_blank" rel="noreferrer" data-accent="green">
+            <span class="module-index">MOD_04</span>
+            <span class="module-icon"><i data-lucide="box" aria-hidden="true"></i></span>
+            <span class="module-copy">
+              <strong data-scramble="MC 服务器">MC 服务器</strong>
+              <small>MINECRAFT GATEWAY</small>
+            </span>
+            <span class="module-domain">mc.swtmax.top</span>
+            <span class="module-state"><i></i> READY</span>
+            <span class="module-arrow"><i data-lucide="arrow-up-right" aria-hidden="true"></i></span>
+          </a>
+        </div>
+      </section>
+
+      <section class="contact" id="contact" aria-labelledby="contact-title">
+        <div class="contact-grid" aria-hidden="true"></div>
+        <div class="contact-copy reveal">
+          <p class="section-code"><span>02</span><span>DIRECT CHANNEL</span></p>
+          <h2 id="contact-title">建立连接<span>.</span></h2>
+          <p>有问题、建议，或者只是想打个招呼。</p>
+        </div>
+
+        <div class="contact-channels reveal">
+          <a href="mailto:swtmax@qq.com">
+            <span class="channel-code">MAIL_01</span>
+            <span class="channel-main"><i data-lucide="mail" aria-hidden="true"></i><strong>swtmax@qq.com</strong></span>
+            <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+          </a>
+          <a href="https://qm.qq.com/cgi-bin/qm/qr?k=OrGbHZcMyk2pK5nprZcaxnKudAC0f62h" target="_blank" rel="noreferrer">
+            <span class="channel-code">COMM_02</span>
+            <span class="channel-main"><i data-lucide="message-circle" aria-hidden="true"></i><strong>QQ</strong></span>
+            <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+          </a>
+          <a href="https://space.bilibili.com/1477026875" target="_blank" rel="noreferrer">
+            <span class="channel-code">MEDIA_03</span>
+            <span class="channel-main"><i data-lucide="tv" aria-hidden="true"></i><strong>BILIBILI</strong></span>
+            <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>© <span id="year"></span> SWTMAX</span>
+      <span>END OF TRANSMISSION</span>
+      <a href="#top" aria-label="返回顶部" title="返回顶部"><i data-lucide="arrow-up" aria-hidden="true"></i></a>
+    </footer>
+  </body>
 </html>
