@@ -29,13 +29,48 @@
     <meta name="twitter:image" content="https://swtmax.top/assets/og-image.png" />
     <meta name="twitter:image:alt" content="swtmax 个人主页预览" />
 
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://swtmax.top/#website",
+            "url": "https://swtmax.top/",
+            "name": "swtmax // personal node",
+            "alternateName": "SWTMAX",
+            "description": "swtmax 的个人主页与在线服务入口。",
+            "inLanguage": "zh-CN",
+            "image": "https://swtmax.top/assets/og-image.png"
+          },
+          {
+            "@type": "ProfilePage",
+            "@id": "https://swtmax.top/#profile",
+            "url": "https://swtmax.top/",
+            "name": "swtmax 个人主页",
+            "isPartOf": {
+              "@id": "https://swtmax.top/#website"
+            },
+            "mainEntity": {
+              "@type": "Person",
+              "@id": "https://swtmax.top/#person",
+              "name": "swtmax",
+              "url": "https://swtmax.top/",
+              "image": "https://swtmax.top/assets/icon-512x512.png",
+              "sameAs": [
+                "https://space.bilibili.com/1477026875"
+              ]
+            }
+          }
+        ]
+      }
+    </script>
+
     <title>swtmax // personal node</title>
     <link rel="canonical" href="https://swtmax.top/" />
     <link rel="icon" href="./assets/favicon.ico" sizes="any" />
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="48x48" href="./assets/favicon-48x48.png" />
-    <link rel="icon" type="image/png" sizes="128x128" href="./assets/favicon-128x128.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png" />
     <link rel="manifest" href="./site.webmanifest" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -60,7 +95,7 @@
     <header class="site-header">
       <a class="brand" href="#top" aria-label="返回首页">
         <span class="brand-mark">
-          <img src="./assets/favicon-128x128.png" alt="" width="28" height="28" />
+          <img src="./assets/icon-192x192.png" alt="" width="28" height="28" />
         </span>
         <span class="brand-copy">
           <strong>SWTMAX</strong>
@@ -113,7 +148,7 @@
             <span class="axis axis-x"></span>
             <span class="axis axis-y"></span>
             <div class="avatar-glitch" data-label="ID_01">
-              <img src="./assets/favicon-128x128.png" alt="swtmax 的像素头像" width="128" height="128" />
+              <img src="./assets/icon-192x192.png" alt="swtmax 的像素头像" width="128" height="128" />
             </div>
           </div>
 
