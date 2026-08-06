@@ -1,0 +1,21 @@
+{
+  "name": "swtmax · 个人主页",
+  "short_name": "swtmax",
+  "description": "swtmax 的个人主页，提供 MC 服务器、资源站、服务监控与 Waline 留言板入口。",
+  "lang": "zh-CN",
+  "dir": "ltr",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "theme_color": "#101612",
+  "background_color": "#101612",
+  "icons": [
+    {
+      "src": "./assets/avatars/profile.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
